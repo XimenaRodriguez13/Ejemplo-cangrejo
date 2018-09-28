@@ -24,6 +24,8 @@ public class Crab extends Actor
         }
         if(isTouching(Worm.class)){
             removeTouching(Worm.class);
+            //todos los sonidos los busca en la carpeta sound
+            Greenfoot.playSound("eating.wav");
         }
     }    
 }
