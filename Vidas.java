@@ -15,11 +15,17 @@ public class Vidas extends Actor
         contador=new Counter("Vidas: ");
         contador.setValue(3);
     }
+    
+    protected void addedToWorld(World world)
+    {
+        world.addObject(contador,80,20);
+    }
+    
     /**
      * Act - do whatever the Vidas wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void disminuir() 
+    public void act() 
     {
         if(contador.getValue()==0)
         {

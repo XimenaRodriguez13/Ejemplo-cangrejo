@@ -27,15 +27,8 @@ public class Langosta extends Actor
             turn(Greenfoot.getRandomNumber(180)-90);
             pasos=0;
         }
-        if(isTouching(Crab.class)){
+        /*if(isTouching(Crab.class)){
             removeTouching(Crab.class);
-        }
-        Actor Crab=getOneObjectAtOffset(0,0,Crab.class);
-        if(Crab!=null){
-            CrabWorld mundo=(CrabWorld)getWorld();
-            getWorld().removeObject(Crab);
-            mundo.objLife.disminuir();
-            getWorld().addObject(new Crab(),99,75);
-        }
+        }*/
    }    
 }
