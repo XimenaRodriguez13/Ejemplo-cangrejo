@@ -13,26 +13,32 @@ public class CrabWorld extends greenfoot.World
      * Constructor for objects of class MyWorld.
      * 
      */
-    public CrabWorld()
+    public CrabWorld(int gusanos)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(560, 560, 1);
         Tiempo tiempo=new Tiempo();
         this.addObject(tiempo,60,20);
-        prepare(10);
+        crab = new Crab();
+        addObject(crab,99,75);
+        langosta = new Langosta();
+        addObject(langosta,213,324);
+        prepare(gusanos);
+    }
+    
+    public Langosta accede()
+    {
+        return langosta;
     }
 
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare(int n)
+    private void prepare()
     {
-        Crab crab = new Crab();
-        addObject(crab,99,75);
-        Langosta langosta = new Langosta();
-        addObject(langosta,213,324);
-        for(int i=0;i<n;i++)
+        
+        for(int i=0;i<gusanos;i++)
         {
             Worm gusano=new Worm();
             addObject(gusano,Greenfoot.getRandomNumber(520)+20,Greenfoot.getRandomNumber(520)+20);
