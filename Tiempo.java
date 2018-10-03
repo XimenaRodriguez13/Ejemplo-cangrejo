@@ -32,7 +32,7 @@ public class Tiempo extends Actor
     public void act() 
     {
         // Add your action code here.
-        if(timer.millisElapsed()>1000)
+        if(timer.millisElapsed() > 1000)
         {
             contador.setValue(contador.getValue()-1);
         }
